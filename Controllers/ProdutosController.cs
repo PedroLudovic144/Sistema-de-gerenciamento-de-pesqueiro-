@@ -15,7 +15,8 @@ public class ProdutosController : ControllerBase
         _context = context;
     }
 
-    [HttpPost]
+
+[HttpPost("produto")]
 public IActionResult RegistrarProduto(Produto produto)
 {
     var pesqueiroExistente = _context.Pesqueiros.Find(produto.PesqueiroId);
